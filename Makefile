@@ -6,7 +6,7 @@
 #    By: david <david@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/05 04:53:08 by david             #+#    #+#              #
-#    Updated: 2025/11/05 04:57:55 by david            ###   ########.fr        #
+#    Updated: 2025/11/05 05:43:54 by david            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,9 +26,9 @@ $(NAME) : $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
 clean :
-	$(RM) $(OBJ);
+	$(RM) $(OBJ)
 fclean : clean
 	$(RM) $(NAME)
 re : fclean
-	$(MAKE) $(all);
+	$(MAKE) $(all)
 .PHONY : all clean fclean re
