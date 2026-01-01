@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 04:50:42 by david             #+#    #+#             */
-/*   Updated: 2026/01/01 03:46:55 by david            ###   ########.fr       */
+/*   Updated: 2026/01/01 05:35:06 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,23 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include "printf/ft_printf.h"
+# include "libft/libft.h"
 
-typedef struct s_test1
+typedef	struct s_a
 {
-	int	number;
-}	t_test1;
+	int	list;
+}	stack_a;
 
-typedef struct test
+typedef	struct s_b
 {
-	t_test1	first;
-}	test;
+	int	list;
+}	stack_b;
 
+typedef	struct s_l
+{
+	stack_a	a;
+	stack_b b;
+}	t_stack;
+
+void errors(void);
 #endif

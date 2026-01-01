@@ -1,41 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/05 04:49:57 by david             #+#    #+#             */
-/*   Updated: 2026/01/01 05:42:07 by david            ###   ########.fr       */
+/*   Created: 2026/01/01 05:33:45 by david             #+#    #+#             */
+/*   Updated: 2026/01/01 05:34:29 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	insert_a(t_stack *stack, char **av)
+void	errors(void)
 {
-	int	i;
-
-	i = 1;
-	while (av[i])
-	{
-		stack->a.list = ft_atoi(av[i++]);
-		if (stack->a.list == -9010)
-			return (-1);
-	}
-	return (0);
-}
-
-int	main(int ac, char **av)
-{
-	t_stack	stack;
-
-	if (ac > 1)
-	{
-		if (insert_a(&stack, av) == -1)
-			errors();
-	}
-	else
-		ft_printf("Error\n");
-	return (0);
+	ft_printf("Errors idiot\n");
 }
