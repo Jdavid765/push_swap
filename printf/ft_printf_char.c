@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_printf_char.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/05 04:49:57 by david             #+#    #+#             */
-/*   Updated: 2026/01/01 03:52:58 by david            ###   ########.fr       */
+/*   Created: 2025/10/17 15:56:43 by yourlogin         #+#    #+#             */
+/*   Updated: 2025/10/19 10:53:49 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "ft_printf.h"
 
-void	tye(test *game)
+int	ft_printf_char(char c)
 {
-	game->first.number = 100;
-	ft_printf("%d\n", game->first.number);
+	write(1, &c, 1);
+	return (1);
 }
 
-int	main(void)
+/*int	main(void)
 {
-	test	game;
-	
-	game.first.number = 10;
-	ft_printf("%d\n", game.first.number);
-	tye(&game);
-	ft_printf("%d\n", game.first.number);
-	return (0);
-}
+	char c = 'A';
+	printf("%d", ft_printf_char(c));
+}*/

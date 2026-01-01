@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/05 04:50:42 by david             #+#    #+#             */
-/*   Updated: 2026/01/01 03:46:55 by david            ###   ########.fr       */
+/*   Created: 2025/10/17 15:55:37 by yourlogin         #+#    #+#             */
+/*   Updated: 2025/10/20 14:00:12 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP
-# define PUSH_SWAP
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
+# define HEX_LOW "0123456789abcdef"
+# define HEX_UPP "0123456789ABCDEF"
 
 # include <unistd.h>
-# include <stdlib.h>
-# include "printf/ft_printf.h"
+# include <stdarg.h>
 
-typedef struct s_test1
-{
-	int	number;
-}	t_test1;
-
-typedef struct test
-{
-	t_test1	first;
-}	test;
+int	ft_printf_char(char c);
+int	ft_printf_str(char *str);
+int	ft_printf_nbr(int n);
+int	ft_printf_dec(unsigned int n);
+int	ft_printf_hexa(unsigned int n, char tmp, int *count);
+int	ft_printf_ptr(void *content);
+int	ft_printf(const char *format, ...);
 
 #endif
