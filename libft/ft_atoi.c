@@ -34,7 +34,7 @@ int	ft_atoi(const char *nptr)
 		res = res * 10 + (nptr[x] - '0');
 		x++;
 	}
-	if (nptr[x]	!= '\0')
+	if (nptr[x] != '\0')
 		return (-9010);
 	return (res * min);
 }

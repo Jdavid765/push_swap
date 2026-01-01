@@ -1,34 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/01 05:33:45 by david             #+#    #+#             */
-/*   Updated: 2026/01/01 17:47:52 by david            ###   ########.fr       */
+/*   Created: 2026/01/01 17:48:50 by david             #+#    #+#             */
+/*   Updated: 2026/01/01 17:49:57 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	errors(void)
+void	init(t_stack *stack)
 {
-	ft_printf("Errors idiot\n");
-	exit(1);
-}
-
-int	count_alloc(char **av)
-{
-	int	count;
-	int	i;
-
-	i = 0;
-	count = 0;
-	while (av[i])
-	{
-		count++;
-		i++;
-	}
-	return (count);
+	stack->a.alloc = 0;
+	stack->b.alloc = 0;
 }
