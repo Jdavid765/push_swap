@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 04:49:57 by david             #+#    #+#             */
-/*   Updated: 2026/01/01 17:54:45 by david            ###   ########.fr       */
+/*   Updated: 2026/01/01 18:10:36 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,13 @@ int	insert_a(t_stack *stack, char **av)
 	int	i;
 
 	i = 0;
-	stack->a.alloc = count_alloc(av);
-	stack->a.list = malloc(stack->a.alloc * sizeof(int));
+	stack->alloc = count_alloc(av);
+	stack->a.list = malloc(stack->alloc * sizeof(int));
+	if (!stack->a.list)
+		return (-1);
+	stack->b.list = malloc(stack->alloc * sizeof(int));
+	if (!stack->b.list)
+		return (-1);
 	while (av[i])
 	{
 		stack->a.list[i] = ft_atoi(av[i]);

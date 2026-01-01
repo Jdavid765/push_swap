@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/01 17:48:50 by david             #+#    #+#             */
-/*   Updated: 2026/01/01 17:49:57 by david            ###   ########.fr       */
+/*   Updated: 2026/01/01 18:07:33 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	init(t_stack *stack)
 {
-	stack->a.alloc = 0;
-	stack->b.alloc = 0;
+	stack->alloc = 0;
+	stack->a.list = NULL;
+	stack->b.list = NULL;
 }
