@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/01 05:33:45 by david             #+#    #+#             */
-/*   Updated: 2026/01/01 17:47:52 by david            ###   ########.fr       */
+/*   Updated: 2026/01/01 19:36:09 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	errors(void)
 {
-	ft_printf("Errors idiot\n");
+	ft_printf("Error idiot\n");
 	exit(1);
 }
 
