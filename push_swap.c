@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 04:49:57 by david             #+#    #+#             */
-/*   Updated: 2026/01/01 19:36:05 by david            ###   ########.fr       */
+/*   Updated: 2026/01/02 19:50:05 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,10 @@
 int	insert_a(t_stack *stack, char **av)
 {
 	int	i;
+	int	position;
 
 	i = 0;
-	stack->alloc = count_alloc(av);
+	position = 0;
 	stack->a.list = ft_calloc(stack->alloc, sizeof(int));
 	if (!stack->a.list)
 		return (-1);
@@ -26,9 +27,8 @@ int	insert_a(t_stack *stack, char **av)
 		return (-1);
 	while (av[i])
 	{
-		stack->a.list[i] = ft_atoi(av[i]);
-		if (stack->a.list[i] == -9010)
-			return (-1);
+		separate(stack, av[i], &position);	
+		position++;
 		i++;
 	}
 	return (0);
@@ -39,7 +39,7 @@ void	push_swap(t_stack *stack, char **av)
 	int	i;
 
 	i = 0;
-	if (insert_a(stack, av + 1) == -1)
+	if (insert_a(stack, av) == -1)
 		errors();
 	while (i < stack->alloc)
 		ft_printf("%d\n", stack->a.list[i++]);
@@ -51,7 +51,8 @@ int	main(int ac, char **av)
 	if (ac > 1)
 	{
 		init(&stack);
-		push_swap(&stack, av);
+		count_alloc_cpy(&stack, av + 1);
+		push_swap(&stack, av + 1);
 	}
 	else
 		ft_printf("Error\n");
