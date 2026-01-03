@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/01 05:33:45 by david             #+#    #+#             */
-/*   Updated: 2026/01/02 19:51:08 by david            ###   ########.fr       */
+/*   Updated: 2026/01/03 21:42:39 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	count(char **all)
 	return (count);
 }
 
-void	count_alloc_cpy(t_stack *stack, char **av)
+int	count_alloc_cpy(t_stack *stack, char **av)
 {
 	int		i;
 
@@ -42,34 +42,29 @@ void	count_alloc_cpy(t_stack *stack, char **av)
 	{
 		stack->cpy = ft_split(av[i], ' ');
 		if (!stack->cpy)
-			errors();
+			return (free_all(stack), -1);			
 		stack->alloc = count(stack->cpy) +  stack->alloc;
 		i++;
 	}
 	ft_printf("%d\n", stack->alloc);
+	return (0);
 }
 
-void	separate(t_stack *stack, char *av, int *position)
+int	separate(t_stack *stack, char *av, int *position)
 {
 	int	i;
 
 	i = 0;
 	stack->cpy = ft_split(av, ' ');
 	if (!stack->cpy)
-		errors();
+		return (-1);
 	while (stack->cpy[i])
 	{
 		stack->a.list[*position] = ft_atoi(stack->cpy[i]);
 		if (stack->a.list[*position] == -9010)
 			return (-1);
 		i++;
-		*position++;
+		(*position)++;
 	}
+	return (0);
 }
-// void	free_all(t_stack stack)
-// {
-// 	int	i;
-
-// 	i = 0;
-// 	while (i < stack->alloc)
-// }

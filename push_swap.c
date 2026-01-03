@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 04:49:57 by david             #+#    #+#             */
-/*   Updated: 2026/01/02 19:50:05 by david            ###   ########.fr       */
+/*   Updated: 2026/01/04 00:43:09 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ int	insert_a(t_stack *stack, char **av)
 		return (-1);
 	while (av[i])
 	{
-		separate(stack, av[i], &position);	
-		position++;
+		if (separate(stack, av[i], &position) == -1)
+			return (-1);
 		i++;
 	}
 	return (0);
@@ -40,7 +40,10 @@ void	push_swap(t_stack *stack, char **av)
 
 	i = 0;
 	if (insert_a(stack, av) == -1)
+	{
+		free_all(stack);
 		errors();
+	}
 	while (i < stack->alloc)
 		ft_printf("%d\n", stack->a.list[i++]);
 }
@@ -51,7 +54,8 @@ int	main(int ac, char **av)
 	if (ac > 1)
 	{
 		init(&stack);
-		count_alloc_cpy(&stack, av + 1);
+		if (count_alloc_cpy(&stack, av + 1) == -1)
+			errors();
 		push_swap(&stack, av + 1);
 	}
 	else

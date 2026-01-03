@@ -6,7 +6,7 @@
 #    By: david <david@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/05 04:53:08 by david             #+#    #+#              #
-#    Updated: 2026/01/01 17:50:25 by david            ###   ########.fr        #
+#    Updated: 2026/01/03 21:11:36 by david            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,8 @@ DIRPRINTF = printf
 PRINTF = $(DIRPRINTF)/libftprintf.a
 SRC = 	push_swap.c\
 	utils.c\
-	init.c
+	init.c\
+	free.c
 OBJ = $(SRC:.c=.o)
 CFLAGS = -Wall -Wextra -Werror -g
 RM = rm -rf
