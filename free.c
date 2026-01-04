@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/03 21:10:09 by david             #+#    #+#             */
-/*   Updated: 2026/01/04 00:43:20 by david            ###   ########.fr       */
+/*   Updated: 2026/01/04 01:07:45 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,25 @@ void	free_all(t_stack *stack)
 	int	i;
 
 	i = 0;
-	if (!stack->cpy)
+	if (stack->cpy)
 	{
-		while (i < stack->alloc)
+		while (stack->cpy[i])
 			free(stack->cpy[i++]);
 		free(stack->cpy);
 	}
-	if (!stack->a.list)
+	if (stack->a.list)
 		free(stack->a.list);
-	if (!stack->b.list)
+	if (stack->b.list)
 		free(stack->b.list);
+}
+
+void	ft_free(t_stack *stack)
+{
+	int	i;
+	
+	i = 0;
+	while (stack->cpy[i])
+		free(stack->cpy[i++]);
+	free(stack->cpy);
+	stack->cpy = NULL;
 }

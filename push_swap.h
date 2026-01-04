@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 04:50:42 by david             #+#    #+#             */
-/*   Updated: 2026/01/03 21:39:39 by david            ###   ########.fr       */
+/*   Updated: 2026/01/04 00:52:40 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ typedef struct t_s
 void	errors(void);
 void	init(t_stack *stack);
 void	free_all(t_stack *stack);
+void	ft_free(t_stack *stack);
 int		separate(t_stack *stack, char *av, int *position);
 int		count_alloc_cpy(t_stack *stack, char **av);
 int		count(char **all);

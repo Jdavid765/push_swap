@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 04:49:57 by david             #+#    #+#             */
-/*   Updated: 2026/01/04 00:43:09 by david            ###   ########.fr       */
+/*   Updated: 2026/01/04 00:46:10 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ void	push_swap(t_stack *stack, char **av)
 	while (i < stack->alloc)
 		ft_printf("%d\n", stack->a.list[i++]);
 }
+
 int	main(int ac, char **av)
 {
 	t_stack	stack;
