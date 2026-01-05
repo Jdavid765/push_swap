@@ -6,11 +6,11 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 21:26:41 by david             #+#    #+#             */
-/*   Updated: 2026/01/05 21:27:13 by david            ###   ########.fr       */
+/*   Updated: 2026/01/05 21:36:46 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	pa(t_stack *stack)
 {

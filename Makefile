@@ -6,7 +6,7 @@
 #    By: david <david@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/05 04:53:08 by david             #+#    #+#              #
-#    Updated: 2026/01/05 21:18:12 by david            ###   ########.fr        #
+#    Updated: 2026/01/05 21:38:33 by david            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,9 +21,9 @@ SRC = 	push_swap.c\
 	init.c\
 	free.c\
 	check_number.c\
-	swap.c\
-	rotate.c\
-	re_rotate.c
+	commands/swap.c\
+	commands/rotate.c\
+	commands/re_rotate.c
 OBJ = $(SRC:.c=.o)
 CFLAGS = -Wall -Wextra -Werror -g
 RM = rm -rf
@@ -34,18 +34,17 @@ RM = rm -rf
 
 NB := $(words $(SRC))
 BARLEN = 30
+CNT = 0
 
 %.o: %.c
-	@$(eval CNT := $(shell ls  2>/dev/null | wc -l))
-	@$(eval PROG := $(shell echo $$(($(CNT) * 100 / $(NB))) ))
-	@$(eval FILLED := $(shell echo $$(($(PROG) * $(BARLEN) / 100)) ))
-	@$(eval EMPTY := $(shell echo $$(($(BARLEN) - $(FILLED))) ))
-
+	$(eval CNT=$(shell echo $$(($(CNT)+1))))
+	$(eval PROG=$(shell echo $$(($(CNT) * 100 / $(NB)))))
+	$(eval FILLED=$(shell echo $$(($(PROG) * $(BARLEN) / 100))))
+	$(eval EMPTY=$(shell echo $$(($(BARLEN) - $(FILLED)))))
 	@printf "\r\033[35m[%s%s] %3s%%\033[0m  \033[90m(%s)\033[0m" \
-		$$(printf '#%.0s' $$(seq 1 $(FILLED))) \
-		$$(printf '.%.0s' $$(seq 1 $(EMPTY))) \
+		"$$(printf '#%.0s' $$(seq 1 $(FILLED)))" \
+		"$$(printf '.%.0s' $$(seq 1 $(EMPTY)))" \
 		"$(PROG)" "$<"
-
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 # --------------------------------------------------------

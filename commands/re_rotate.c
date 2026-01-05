@@ -6,11 +6,11 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 21:09:32 by david             #+#    #+#             */
-/*   Updated: 2026/01/05 21:26:25 by david            ###   ########.fr       */
+/*   Updated: 2026/01/05 21:37:07 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	rra(t_stack *stack)
 {
@@ -40,7 +40,7 @@ void	rrb(t_stack *stack)
 	tmp = 0;
 	while (i >= 0)
 	{
-		if (i == stack->b.size - 1);
+		if (i == stack->b.size - 1)
 			tmp = stack->b.list[i];
 		if (i == 0)
 			stack->b.list[i] = tmp;
