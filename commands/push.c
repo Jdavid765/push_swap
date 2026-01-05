@@ -6,13 +6,19 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 21:26:41 by david             #+#    #+#             */
-/*   Updated: 2026/01/05 21:36:46 by david            ###   ########.fr       */
+/*   Updated: 2026/01/05 21:55:07 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	pa(t_stack *stack)
+void	pb(t_stack *stack)
 {
-	
+	int	i;
+
+	i = 0;
+	stack->b.list[0] = stack->a.list[0];
+	stack->b.size++;
+	stack->a.size--;
+	while ()
 }

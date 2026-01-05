@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 04:50:42 by david             #+#    #+#             */
-/*   Updated: 2026/01/05 21:31:49 by david            ###   ########.fr       */
+/*   Updated: 2026/01/05 21:49:14 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,12 @@ void	rr(t_stack *stack);
 void	rra(t_stack *stack);
 void	rrb(t_stack *stack);
 void	rrr(t_stack *stack);
+
 void	errors(t_stack *stack);
-void	init(t_stack *stack);
 void	free_all(t_stack *stack);
 void	ft_free(t_stack *stack);
+void	init(t_stack *stack);
+
 int		separate(t_stack *stack, char *av, int *position);
 int		count_alloc_cpy(t_stack *stack, char **av);
 int		count(char **all);
