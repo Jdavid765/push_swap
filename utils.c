@@ -6,15 +6,16 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/01 05:33:45 by david             #+#    #+#             */
-/*   Updated: 2026/01/04 00:58:17 by david            ###   ########.fr       */
+/*   Updated: 2026/01/05 15:28:09 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	errors(void)
+void	errors(t_stack *stack)
 {
 	ft_printf("Error idiot\n");
+	free_all(stack);
 	exit(1);
 }
 

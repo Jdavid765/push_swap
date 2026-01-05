@@ -6,7 +6,7 @@
 #    By: david <david@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/05 04:53:08 by david             #+#    #+#              #
-#    Updated: 2026/01/03 21:11:36 by david            ###   ########.fr        #
+#    Updated: 2026/01/05 15:26:27 by david            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ PRINTF = $(DIRPRINTF)/libftprintf.a
 SRC = 	push_swap.c\
 	utils.c\
 	init.c\
-	free.c
+	free.c\
+	check_number.c
 OBJ = $(SRC:.c=.o)
 CFLAGS = -Wall -Wextra -Werror -g
 RM = rm -rf
