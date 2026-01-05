@@ -6,7 +6,7 @@
 #    By: david <david@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/05 04:53:08 by david             #+#    #+#              #
-#    Updated: 2026/01/05 15:26:27 by david            ###   ########.fr        #
+#    Updated: 2026/01/05 21:18:12 by david            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,10 @@ SRC = 	push_swap.c\
 	utils.c\
 	init.c\
 	free.c\
-	check_number.c
+	check_number.c\
+	swap.c\
+	rotate.c\
+	re_rotate.c
 OBJ = $(SRC:.c=.o)
 CFLAGS = -Wall -Wextra -Werror -g
 RM = rm -rf

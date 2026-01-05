@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 04:49:57 by david             #+#    #+#             */
-/*   Updated: 2026/01/05 15:31:41 by david            ###   ########.fr       */
+/*   Updated: 2026/01/05 21:23:09 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int	insert_a(t_stack *stack, char **av)
 			return (-1);
 		i++;
 	}
+	stack->a.size = stack->alloc;
 	return (0);
 }
 
@@ -43,6 +44,8 @@ void	push_swap(t_stack *stack, char **av)
 		errors(stack);
 	if (same_numbers(stack) == -1)
 		errors(stack);
+	// ra(stack);
+	rra(stack);
 	while (i < stack->alloc)
 		ft_printf("%d\n", stack->a.list[i++]);
 }

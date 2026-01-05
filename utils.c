@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/01 05:33:45 by david             #+#    #+#             */
-/*   Updated: 2026/01/05 15:28:09 by david            ###   ########.fr       */
+/*   Updated: 2026/01/05 21:00:55 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	count_alloc_cpy(t_stack *stack, char **av)
 		ft_free(stack);
 		i++;
 	}
-	ft_printf("%d\n", stack->alloc);
+	ft_printf("alloc = %d\n", stack->alloc);
 	return (0);
 }
 

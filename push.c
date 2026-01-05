@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init.c                                             :+:      :+:    :+:   */
+/*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/01 17:48:50 by david             #+#    #+#             */
-/*   Updated: 2026/01/05 18:18:48 by david            ###   ########.fr       */
+/*   Created: 2026/01/05 21:26:41 by david             #+#    #+#             */
+/*   Updated: 2026/01/05 21:27:13 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	init(t_stack *stack)
+void	pa(t_stack *stack)
 {
-	stack->alloc = 0;
-	stack->a.list = NULL;
-	stack->b.list = NULL;
-	stack->cpy = NULL;
-	stack->a.size = 0;
-	stack->b.size = 0;
+	
 }
