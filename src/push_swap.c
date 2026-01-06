@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 04:49:57 by david             #+#    #+#             */
-/*   Updated: 2026/01/06 20:54:32 by david            ###   ########.fr       */
+/*   Updated: 2026/01/06 21:13:51 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,8 @@ void	push_swap(t_stack *stack, char **av)
 		errors(stack);
 	if (same_numbers(stack) == -1)
 		errors(stack);
-	pb(stack);
-	pb(stack);
-	pb(stack);
+	sa(stack);
+	rra(stack);
 	while (i < stack->a.size)
 		ft_printf("%d\n", stack->a.list[i++]);
 	ft_printf("--------------\n");

@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 17:48:08 by david             #+#    #+#             */
-/*   Updated: 2026/01/06 21:04:08 by david            ###   ########.fr       */
+/*   Updated: 2026/01/06 21:13:29 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	sa(t_stack *stack)
 {
 	int	tmp;
 
-	if (stack->a.size >= 1)
+	if (stack->a.size <= 1)
 		return ;
 	tmp = 0;
 	tmp = stack->a.list[0];
@@ -28,7 +28,7 @@ void	sb(t_stack *stack)
 {
 	int	tmp;
 
-	if (stack->b.size >= 1)
+	if (stack->b.size <= 1)
 		return ;
 	tmp = 0;
 	tmp = stack->b.list[0];

@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 21:26:41 by david             #+#    #+#             */
-/*   Updated: 2026/01/06 21:04:23 by david            ###   ########.fr       */
+/*   Updated: 2026/01/06 21:12:17 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	pb(t_stack *stack)
 {
+	if (stack->a.size <= 0)
+		return ;
 	if (stack->b.size >= 1)
 	{
 		stack->a.size--;
@@ -32,6 +34,8 @@ void	pb(t_stack *stack)
 
 void	pa(t_stack *stack)
 {
+	if (stack->b.size <= 0)
+		return ;
 	if (stack->a.size >= 1)
 	{
 		stack->a.size++;
