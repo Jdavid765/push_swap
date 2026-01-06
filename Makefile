@@ -6,7 +6,7 @@
 #    By: david <david@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/05 04:53:08 by david             #+#    #+#              #
-#    Updated: 2026/01/06 18:47:22 by david            ###   ########.fr        #
+#    Updated: 2026/01/06 21:03:47 by david            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,11 +16,11 @@ DIRLIBFT = libft
 LIBFT = $(DIRLIBFT)/libft.a
 DIRPRINTF = printf
 PRINTF = $(DIRPRINTF)/libftprintf.a
-SRC = 	push_swap.c\
-	utils.c\
-	init.c\
-	free.c\
-	check_number.c\
+SRC = 	src/push_swap.c\
+	src/utils.c\
+	src/init.c\
+	src/free.c\
+	src/check_number.c\
 	commands/swap.c\
 	commands/rotate.c\
 	commands/re_rotate.c\

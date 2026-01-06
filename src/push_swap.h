@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 04:50:42 by david             #+#    #+#             */
-/*   Updated: 2026/01/06 18:40:43 by david            ###   ########.fr       */
+/*   Updated: 2026/01/06 21:03:28 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include "printf/ft_printf.h"
-# include "libft/libft.h"
+# include "../printf/ft_printf.h"
+# include "../libft/libft.h"
 
 typedef struct t_a
 {
