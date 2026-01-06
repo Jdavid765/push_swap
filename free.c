@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/03 21:10:09 by david             #+#    #+#             */
-/*   Updated: 2026/01/04 01:07:45 by david            ###   ########.fr       */
+/*   Updated: 2026/01/06 18:50:15 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	free_all(t_stack *stack)
 void	ft_free(t_stack *stack)
 {
 	int	i;
-	
+
 	i = 0;
 	while (stack->cpy[i])
 		free(stack->cpy[i++]);
