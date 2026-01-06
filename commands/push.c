@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 21:26:41 by david             #+#    #+#             */
-/*   Updated: 2026/01/05 21:55:07 by david            ###   ########.fr       */
+/*   Updated: 2026/01/06 18:47:09 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,36 @@
 
 void	pb(t_stack *stack)
 {
-	int	i;
+	if (stack->b.size >= 1)
+	{
+		stack->a.size--;
+		stack->b.size++;
+		order_more_b(stack);
+		order_minus_a(stack);
+	}
+	else
+	{
+		stack->b.list[0] = stack->a.list[0];
+		stack->a.size--;
+		stack->b.size++;
+		order_minus_a(stack);
+	}
+}
 
-	i = 0;
-	stack->b.list[0] = stack->a.list[0];
-	stack->b.size++;
-	stack->a.size--;
-	while ()
+void	pa(t_stack *stack)
+{
+	if (stack->a.size >= 1)
+	{
+		stack->a.size++;
+		stack->b.size--;
+		order_more_a(stack);
+		order_minus_b(stack);
+	}
+	else
+	{
+		stack->a.list[0] = stack->b.list[0];
+		stack->a.size++;
+		stack->b.size--;
+		order_minus_b(stack);
+	}
 }

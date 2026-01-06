@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 18:16:36 by david             #+#    #+#             */
-/*   Updated: 2026/01/05 21:36:40 by david            ###   ########.fr       */
+/*   Updated: 2026/01/06 16:43:07 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	rb(t_stack *stack)
 	{
 		if (i == 0)
 			tmp = stack->b.list[i];
-		if (stack->b.list[i] == stack->b.list[stack->b.size - 1])
+		if (i == stack->b.size - 1)
 			stack->b.list[i] = tmp;
 		else
 			stack->b.list[i] = stack->b.list[i + 1];

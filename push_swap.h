@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 04:50:42 by david             #+#    #+#             */
-/*   Updated: 2026/01/05 21:49:14 by david            ###   ########.fr       */
+/*   Updated: 2026/01/06 18:40:43 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,13 @@ void	rr(t_stack *stack);
 void	rra(t_stack *stack);
 void	rrb(t_stack *stack);
 void	rrr(t_stack *stack);
+
+void	order_more_b(t_stack *stack);
+void	order_more_a(t_stack *stack);
+void	order_minus_a(t_stack *stack);
+void	order_minus_b(t_stack *stack);
+void	pb(t_stack *stack);
+void	pa(t_stack *stack);
 
 void	errors(t_stack *stack);
 void	free_all(t_stack *stack);
