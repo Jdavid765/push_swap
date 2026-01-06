@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/01 05:33:45 by david             #+#    #+#             */
-/*   Updated: 2026/01/05 21:00:55 by david            ###   ########.fr       */
+/*   Updated: 2026/01/06 21:20:15 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	count_alloc_cpy(t_stack *stack, char **av)
 	{
 		stack->cpy = ft_split(av[i], ' ');
 		if (!stack->cpy)
-			return (free_all(stack), -1);
+			return (-1);
 		stack->alloc = count(stack->cpy) + stack->alloc;
 		ft_free(stack);
 		i++;
