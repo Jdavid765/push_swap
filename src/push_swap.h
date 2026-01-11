@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 04:50:42 by david             #+#    #+#             */
-/*   Updated: 2026/01/11 18:19:12 by david            ###   ########.fr       */
+/*   Updated: 2026/01/11 18:33:02 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,7 @@ int		same_numbers(t_stack *stack);
 
 void	choose_algo(t_stack *stack);
 void	algo_small(t_stack *stack);
+void	for_two(t_stack *stack);
+void	for_tree(t_stack *stack);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 17:48:08 by david             #+#    #+#             */
-/*   Updated: 2026/01/06 21:13:29 by david            ###   ########.fr       */
+/*   Updated: 2026/01/11 18:48:40 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	sa(t_stack *stack)
 	tmp = stack->a.list[0];
 	stack->a.list[0] = stack->a.list[1];
 	stack->a.list[1] = tmp;
+	stack->instructions++;
 }
 
 void	sb(t_stack *stack)
@@ -34,10 +35,12 @@ void	sb(t_stack *stack)
 	tmp = stack->b.list[0];
 	stack->b.list[0] = stack->b.list[1];
 	stack->b.list[1] = tmp;
+	stack->instructions++;
 }
 
 void	ss(t_stack *stack)
 {
 	sa(stack);
 	sb(stack);
+	stack->instructions = stack->instructions + 2;
 }

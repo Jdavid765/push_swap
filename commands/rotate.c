@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 18:16:36 by david             #+#    #+#             */
-/*   Updated: 2026/01/06 21:04:13 by david            ###   ########.fr       */
+/*   Updated: 2026/01/11 18:48:22 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void	ra(t_stack *stack)
 			stack->a.list[i] = stack->a.list[i + 1];
 		i++;
 	}
+	stack->instructions++;
 }
 
 void	rb(t_stack *stack)
@@ -48,10 +49,12 @@ void	rb(t_stack *stack)
 			stack->b.list[i] = stack->b.list[i + 1];
 		i++;
 	}
+	stack->instructions++;
 }
 
 void	rr(t_stack *stack)
 {
 	ra(stack);
 	rb(stack);
+	stack->instructions = stack->instructions + 2;
 }
