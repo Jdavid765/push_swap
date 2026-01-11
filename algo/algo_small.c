@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init.c                                             :+:      :+:    :+:   */
+/*   algo_small.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/01 17:48:50 by david             #+#    #+#             */
-/*   Updated: 2026/01/11 18:04:03 by david            ###   ########.fr       */
+/*   Created: 2026/01/11 17:32:43 by david             #+#    #+#             */
+/*   Updated: 2026/01/11 18:13:28 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../src/push_swap.h"
 
-void	init(t_stack *stack)
+void	algo_small(t_stack *stack)
 {
-	stack->alloc = 0;
-	stack->a.list = NULL;
-	stack->b.list = NULL;
-	stack->cpy = NULL;
-	stack->a.size = 0;
-	stack->b.size = 0;
-	stack->instructions = 0;
+	if (stack->a.size <= 2)
+		for_two(stack);
+}
+
+void	for_two(t_stack *stack)
+{
+	if (stack->a.list[0] > stack->a.list[1])
+	{
+		sa(stack);
+		stack->instructions++;
+	}
+	else
+		ft_printf("All good nothing to change\n");
 }

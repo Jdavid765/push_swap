@@ -6,7 +6,7 @@
 #    By: david <david@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/05 04:53:08 by david             #+#    #+#              #
-#    Updated: 2026/01/06 21:03:47 by david            ###   ########.fr        #
+#    Updated: 2026/01/11 18:15:39 by david            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,10 @@ SRC = 	src/push_swap.c\
 	commands/rotate.c\
 	commands/re_rotate.c\
 	commands/push.c\
-	commands/push2.c
+	commands/push2.c\
+	algo/algo_small.c\
+	algo/choose_algo.c\
+	algo/algo_big.c
 OBJ = $(SRC:.c=.o)
 CFLAGS = -Wall -Wextra -Werror -g
 RM = rm -rf

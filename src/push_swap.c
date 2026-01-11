@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 04:49:57 by david             #+#    #+#             */
-/*   Updated: 2026/01/06 21:13:51 by david            ###   ########.fr       */
+/*   Updated: 2026/01/11 18:15:53 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,14 +44,14 @@ void	push_swap(t_stack *stack, char **av)
 		errors(stack);
 	if (same_numbers(stack) == -1)
 		errors(stack);
-	sa(stack);
-	rra(stack);
+	choose_algo(stack);
 	while (i < stack->a.size)
 		ft_printf("%d\n", stack->a.list[i++]);
 	ft_printf("--------------\n");
 	i = 0;
 	while (i < stack->b.size)
 		ft_printf("%d\n", stack->b.list[i++]);
+	ft_printf("Instructions = %d\n", stack->instructions);
 }
 
 int	main(int ac, char **av)
@@ -67,6 +67,6 @@ int	main(int ac, char **av)
 		free_all(&stack);
 	}
 	else
-		ft_printf("Error\n");
+		ft_printf("Error minimun 2 numbers\n");
 	return (0);
 }

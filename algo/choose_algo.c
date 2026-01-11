@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init.c                                             :+:      :+:    :+:   */
+/*   choose_algo.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/01 17:48:50 by david             #+#    #+#             */
-/*   Updated: 2026/01/11 18:04:03 by david            ###   ########.fr       */
+/*   Created: 2026/01/11 17:33:37 by david             #+#    #+#             */
+/*   Updated: 2026/01/11 18:15:59 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../src/push_swap.h"
 
-void	init(t_stack *stack)
+void	choose_algo(t_stack *stack)
 {
-	stack->alloc = 0;
-	stack->a.list = NULL;
-	stack->b.list = NULL;
-	stack->cpy = NULL;
-	stack->a.size = 0;
-	stack->b.size = 0;
-	stack->instructions = 0;
+	if (stack->a.size <= 5)
+		algo_small(stack);
+	// else
+		// algo_big(stack);
 }

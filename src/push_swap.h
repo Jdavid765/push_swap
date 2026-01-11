@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 04:50:42 by david             #+#    #+#             */
-/*   Updated: 2026/01/06 21:03:28 by david            ###   ########.fr       */
+/*   Updated: 2026/01/11 18:16:38 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ typedef struct t_s
 	t_stack_b	b;
 	int			alloc;
 	char		**cpy;
+	int			instructions;
 }	t_stack;
 
 void	sa(t_stack *stack);
@@ -64,5 +65,9 @@ int		separate(t_stack *stack, char *av, int *position);
 int		count_alloc_cpy(t_stack *stack, char **av);
 int		count(char **all);
 int		same_numbers(t_stack *stack);
+
+void	choose_algo(t_stack *stack);
+void	algo_small(t_stack *stack);
+void	for_two(t_stack *stack);
 
 #endif

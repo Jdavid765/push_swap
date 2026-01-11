@@ -1,24 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init.c                                             :+:      :+:    :+:   */
+/*   algo_big.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/01 17:48:50 by david             #+#    #+#             */
-/*   Updated: 2026/01/11 18:04:03 by david            ###   ########.fr       */
+/*   Created: 2026/01/11 17:43:59 by david             #+#    #+#             */
+/*   Updated: 2026/01/11 17:44:16 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-
-void	init(t_stack *stack)
-{
-	stack->alloc = 0;
-	stack->a.list = NULL;
-	stack->b.list = NULL;
-	stack->cpy = NULL;
-	stack->a.size = 0;
-	stack->b.size = 0;
-	stack->instructions = 0;
-}
+#include "../src/push_swap.h"
