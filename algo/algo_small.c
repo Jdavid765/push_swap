@@ -6,17 +6,11 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 17:32:43 by david             #+#    #+#             */
-/*   Updated: 2026/01/11 18:13:28 by david            ###   ########.fr       */
+/*   Updated: 2026/01/11 18:18:04 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../src/push_swap.h"
-
-void	algo_small(t_stack *stack)
-{
-	if (stack->a.size <= 2)
-		for_two(stack);
-}
 
 void	for_two(t_stack *stack)
 {
@@ -27,4 +21,10 @@ void	for_two(t_stack *stack)
 	}
 	else
 		ft_printf("All good nothing to change\n");
+}
+
+void	algo_small(t_stack *stack)
+{
+	if (stack->a.size <= 2)
+		for_two(stack);
 }
