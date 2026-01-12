@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 18:16:36 by david             #+#    #+#             */
-/*   Updated: 2026/01/11 18:48:22 by david            ###   ########.fr       */
+/*   Updated: 2026/01/12 14:45:03 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ void	ra(t_stack *stack)
 		i++;
 	}
 	stack->instructions++;
+	ft_printf("ra\n");
 }
 
 void	rb(t_stack *stack)
@@ -50,6 +51,7 @@ void	rb(t_stack *stack)
 		i++;
 	}
 	stack->instructions++;
+	ft_printf("rb\n");
 }
 
 void	rr(t_stack *stack)

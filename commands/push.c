@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 21:26:41 by david             #+#    #+#             */
-/*   Updated: 2026/01/11 18:47:45 by david            ###   ########.fr       */
+/*   Updated: 2026/01/12 14:44:13 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	pb(t_stack *stack)
 		order_minus_a(stack);
 	}
 	stack->instructions++;
+	ft_printf("pb\n");
 }
 
 void	pa(t_stack *stack)
@@ -52,4 +53,5 @@ void	pa(t_stack *stack)
 		order_minus_b(stack);
 	}
 	stack->instructions++;
+	ft_printf("pa\n");
 }
