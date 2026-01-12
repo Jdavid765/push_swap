@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 21:09:32 by david             #+#    #+#             */
-/*   Updated: 2026/01/12 14:44:38 by david            ###   ########.fr       */
+/*   Updated: 2026/01/12 15:02:33 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,5 @@ void	rrr(t_stack *stack)
 {
 	rra(stack);
 	rrb(stack);
-	stack->instructions = stack->instructions + 2;
+	stack->instructions = stack->instructions - 1;
 }

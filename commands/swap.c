@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 17:48:08 by david             #+#    #+#             */
-/*   Updated: 2026/01/12 14:45:28 by david            ###   ########.fr       */
+/*   Updated: 2026/01/12 15:05:46 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,5 @@ void	ss(t_stack *stack)
 {
 	sa(stack);
 	sb(stack);
-	stack->instructions = stack->instructions + 2;
+	stack->instructions = stack->instructions - 1;
 }
