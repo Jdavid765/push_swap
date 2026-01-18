@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 17:33:37 by david             #+#    #+#             */
-/*   Updated: 2026/01/18 22:56:56 by david            ###   ########.fr       */
+/*   Updated: 2026/01/18 23:00:07 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@ void	choose_algo(t_stack *stack)
 {
 	if (stack->a.size <= 5)
 		algo_small(stack);
-	// else
-	// 	algo_big(stack);
+	else
+		algo_big(stack);
 }
