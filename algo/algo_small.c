@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 17:32:43 by david             #+#    #+#             */
-/*   Updated: 2026/01/12 16:20:32 by david            ###   ########.fr       */
+/*   Updated: 2026/01/18 22:21:48 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	algo_small(t_stack *stack)
 		for_two(stack);
 	if (stack->a.size == 3)
 		for_tree(stack);
+	if (stack->a.size >= 4)
+		for_four(stack);
 }
 
 void	for_two(t_stack *stack)
@@ -34,7 +36,7 @@ void	for_tree(t_stack *stack)
 	int	small;
 
 	i = 0;
-	small = 100000;
+	small = 214748364;
 	while (i < stack->a.size)
 	{
 		if (small > stack->a.list[i])

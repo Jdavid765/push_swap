@@ -6,7 +6,7 @@
 #    By: david <david@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/05 04:53:08 by david             #+#    #+#              #
-#    Updated: 2026/01/12 16:06:21 by david            ###   ########.fr        #
+#    Updated: 2026/01/18 22:20:40 by david            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,8 @@ SRC = 	src/push_swap.c\
 	commands/push2.c\
 	algo/algo_small.c\
 	algo/choose_algo.c\
-	algo/algo_big.c
+	algo/algo_big.c\
+	algo/algo_small2.c
 OBJ = $(SRC:.c=.o)
 CFLAGS = -Wall -Wextra -Werror -g
 RM = rm -rf
