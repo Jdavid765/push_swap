@@ -6,13 +6,13 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 17:43:59 by david             #+#    #+#             */
-/*   Updated: 2026/01/19 19:17:37 by david            ###   ########.fr       */
+/*   Updated: 2026/01/19 19:23:11 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../src/push_swap.h"
 
-// void	algo_big(t_stack *stack)
-// {
+void	algo_big(t_stack *stack)
+{
 	
-// }
+}
