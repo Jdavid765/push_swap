@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 17:32:43 by david             #+#    #+#             */
-/*   Updated: 2026/01/18 22:21:48 by david            ###   ########.fr       */
+/*   Updated: 2026/01/19 17:05:39 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	algo_small(t_stack *stack)
 		for_two(stack);
 	if (stack->a.size == 3)
 		for_tree(stack);
-	if (stack->a.size >= 4)
+	else
 		for_four(stack);
 }
 
