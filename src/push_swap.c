@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 04:49:57 by david             #+#    #+#             */
-/*   Updated: 2026/01/12 16:13:46 by david            ###   ########.fr       */
+/*   Updated: 2026/01/22 19:45:03 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,22 +37,12 @@ int	insert_a(t_stack *stack, char **av)
 
 void	push_swap(t_stack *stack, char **av)
 {
-	int	i;
-
-	i = 0;
 	if (insert_a(stack, av) == -1)
 		errors(stack);
 	if (same_numbers(stack) == -1)
 		errors(stack);
 	good_orders(stack);
 	choose_algo(stack);
-	while (i < stack->a.size)
-		ft_printf("%d\n", stack->a.list[i++]);
-	ft_printf("--------------\n");
-	i = 0;
-	while (i < stack->b.size)
-		ft_printf("%d\n", stack->b.list[i++]);
-	ft_printf("Instructions = %d\n", stack->instructions);
 }
 
 int	main(int ac, char **av)
