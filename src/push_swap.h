@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 04:50:42 by david             #+#    #+#             */
-/*   Updated: 2026/01/22 19:22:24 by david            ###   ########.fr       */
+/*   Updated: 2026/01/22 21:51:02 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,14 +81,12 @@ void	for_tree(t_stack *stack);
 void	for_four(t_stack *stack);
 void	push_min_to_b(t_stack *stack);
 
-void	algo_big(t_stack *stack);
-
 void	good_orders(t_stack *stack);
 void	orders(t_stack *stack);
 
+void	algo_big(t_stack *stack);
 void	count_bytes(int nb, int *count);
 void	loop_algo(t_stack *stack, int c_bytes);
-
 void	push_all_a(t_stack *stack);
 void	sort_in_list(t_stack *stack);
 void	loop_sorted_in_list(t_stack *stack, int i, int j);
