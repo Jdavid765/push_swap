@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 16:00:46 by david             #+#    #+#             */
-/*   Updated: 2026/01/12 16:15:38 by david            ###   ########.fr       */
+/*   Updated: 2026/01/22 19:24:53 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	good_orders(t_stack *stack)
 		if (i == stack->a.size - 1)
 		{
 			total++;
-			break;
+			break ;
 		}
 		if (stack->a.list[i] < stack->a.list[i + 1])
 			total++;

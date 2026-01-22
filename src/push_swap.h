@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 04:50:42 by david             #+#    #+#             */
-/*   Updated: 2026/01/22 03:14:12 by david            ###   ########.fr       */
+/*   Updated: 2026/01/22 19:22:24 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,17 @@ typedef struct t_b
 	int	size;
 }	t_stack_b;
 
+typedef struct t_sort
+{
+	int	*list;
+	int	size;
+}	t_sorted;
+
 typedef struct t_s
 {
 	t_stack_a	a;
 	t_stack_b	b;
+	t_sorted	sorted;
 	int			alloc;
 	char		**cpy;
 	int			instructions;
@@ -79,11 +86,12 @@ void	algo_big(t_stack *stack);
 void	good_orders(t_stack *stack);
 void	orders(t_stack *stack);
 
-void	search_bigger(t_stack *stack, int *c_bytes);
 void	count_bytes(int nb, int *count);
-void	loop_algo(t_stack *stack, int c_bytes, int i, int count);
-void	push_all_a(t_stack *stack);
+void	loop_algo(t_stack *stack, int c_bytes);
 
-int		one_zero(int nb, int count, int lower);
+void	push_all_a(t_stack *stack);
+void	sort_in_list(t_stack *stack);
+void	loop_sorted_in_list(t_stack *stack, int i, int j);
+int		search_index(t_stack *stack, int nb);
 
 #endif

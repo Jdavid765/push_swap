@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 17:43:59 by david             #+#    #+#             */
-/*   Updated: 2026/01/22 03:28:58 by david            ###   ########.fr       */
+/*   Updated: 2026/01/22 19:29:00 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,77 +15,46 @@
 void	algo_big(t_stack *stack)
 {
 	int	c_bytes;
-	int	i;
-	int	count;
-	
+
 	c_bytes = 0;
-	i = 0;
-	count = 0;
-	search_bigger(stack, &c_bytes);
-	loop_algo(stack, c_bytes, i, count);
+	sort_in_list(stack);
+	count_bytes(stack->a.size - 1, &c_bytes);
+	loop_algo(stack, c_bytes);
 }
 
-void	loop_algo(t_stack *stack, int c_bytes, int i, int count)
-{
-	int	lower;
-
-	lower = 0;
-	while (c_bytes >= 0)
-	{
-		while (i < stack->a.size)
-		{
-			count_bytes(stack->a.list[i], &count);
-			if (one_zero(stack->a.list[i], count, lower) == 0)
-				pb(stack);
-			else
-				ra(stack);
-			i++;
-		}
-		i = 0;
-		lower++;
-		push_all_a(stack);
-		c_bytes--;
-	}
-}
-
-int	one_zero(int nb, int count, int lower)
-{
-	count = count - lower;
-	if (nb < 0)
-		nb *= -1;
-	while (count > 0)
-	{
-		nb /= 2;
-		count--;
-	}
-	nb %= 2;
-	if (nb == 0)
-		return (0);
-	else
-		return (1);
-}
-
-void	search_bigger(t_stack *stack, int *c_bytes)
+void	loop_algo(t_stack *stack, int c_bytes)
 {
 	int	i;
-	int	bigger;
+	int	x;
+	int	size;
+	int	index;
 
 	i = 0;
-	bigger = -111111;
-	while (i < stack->a.size)
+	x = 0;
+	index = 0;
+	while (i <= c_bytes)
 	{
-		if (bigger < stack->a.list[i])
-			bigger = stack->a.list[i];
+		size = stack->a.size;
+		while (x < size)
+		{
+			index = search_index(stack, stack->a.list[0]);
+			if (((index >> i) & 1) == 1)
+				ra(stack);
+			else
+				pb(stack);
+			x++;
+		}
+		push_all_a(stack);
+		x = 0;
+		size = 0;
 		i++;
 	}
-	count_bytes(bigger, c_bytes);
 }
 
 void	count_bytes(int nb, int *count)
 {
 	if (nb < 0)
 		nb *= -1;
-
 	if (nb >= 2)
 	{
 		count_bytes(nb / 2, count);
