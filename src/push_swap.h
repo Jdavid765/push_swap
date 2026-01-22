@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 04:50:42 by david             #+#    #+#             */
-/*   Updated: 2026/01/22 02:43:29 by david            ###   ########.fr       */
+/*   Updated: 2026/01/22 03:14:12 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,11 @@ void	algo_big(t_stack *stack);
 void	good_orders(t_stack *stack);
 void	orders(t_stack *stack);
 
-void	search_bigger(t_stack *stack);
+void	search_bigger(t_stack *stack, int *c_bytes);
 void	count_bytes(int nb, int *count);
+void	loop_algo(t_stack *stack, int c_bytes, int i, int count);
+void	push_all_a(t_stack *stack);
+
+int		one_zero(int nb, int count, int lower);
 
 #endif
