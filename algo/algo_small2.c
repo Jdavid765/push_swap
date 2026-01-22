@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/18 22:17:18 by david             #+#    #+#             */
-/*   Updated: 2026/01/19 15:47:50 by david            ###   ########.fr       */
+/*   Updated: 2026/01/22 02:46:50 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,92 +14,45 @@
 
 void	for_four(t_stack *stack)
 {
-	int	i;
-	int	bigger;
-	int	position;
-	int	mid;
+	int	size;
 
-	i = 0;
-	bigger = -2147483;
-	position = 0;
-	mid = (stack->a.size - 1) / 2;
-	while (i < stack->a.size)
+	size = stack->a.size;
+	while (size > 3)
 	{
-		if (bigger < stack->a.list[i])
-		{
-			bigger = stack->a.list[i];
-			position = i;
-		}
-		i++;
+		push_min_to_b(stack);
+		size--;
 	}
-	best_rotation(stack, position, mid, bigger);
-	algo_four_five(stack);
-	last_rotation(stack,mid);
-	pa(stack);
-	ra(stack);
+	for_tree(stack);
+	while (stack->b.size > 0)
+		pa(stack);
 }
 
-void	algo_four_five(t_stack *stack)
-{
-	int	i;
-	
-	i = 1;
-	if (stack->a.list[0] > stack->a.list[1])
-		sa(stack);
-	while (i < stack->a.size - 1)
-	{
-		if (stack->a.list[i] > stack->a.list[i + 1])
-			ra_sa(stack, i);
-		ra(stack);
-		i++;
-	}
-}
-
-void	ra_sa(t_stack *stack, int position)
-{
-	while (position != 0)
-	{
-		ra(stack);
-		position--;
-	}
-	sa(stack);
-}
-
-void	best_rotation(t_stack *stack, int position, int mid, int bigger)
-{
-	if (position <= mid)
-	{
-		while (bigger != stack->a.list[0])
-			ra(stack);
-	}
-	else
-		while (bigger != stack->a.list[0])
-			rra(stack);
-	pb(stack);
-}
-
-void	last_rotation(t_stack *stack, int mid)
+void	push_min_to_b(t_stack *stack)
 {
 	int	i;
 	int	small;
 	int	position;
-	
+	int	mid;
+
 	i = 0;
-	small = 2121221;
+	small = 2147483647;
 	position = 0;
+	mid = stack->a.size / 2;
 	while (i < stack->a.size)
 	{
-		if(small > stack->a.list[i])
+		if (small > stack->a.list[i])
 		{
 			small = stack->a.list[i];
 			position = i;
 		}
-		i++; 
+		i++;
 	}
-	if (position < mid)
-		while (small != stack->a.list[0])
+	if (position <= mid)
+		while (stack->a.list[0] != small)
 			ra(stack);
 	else
-		while (small != stack->a.list[0])
+		while (stack->a.list[0] != small)
 			rra(stack);
+	pb(stack);
 }
+

@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 04:50:42 by david             #+#    #+#             */
-/*   Updated: 2026/01/19 18:41:11 by david            ###   ########.fr       */
+/*   Updated: 2026/01/22 02:43:29 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,14 +72,14 @@ void	algo_small(t_stack *stack);
 void	for_two(t_stack *stack);
 void	for_tree(t_stack *stack);
 void	for_four(t_stack *stack);
-void	algo_four_five(t_stack *stack);
-void	ra_sa(t_stack *stack, int position);
-void	best_rotation(t_stack *stack, int position, int mid, int bigger);
-void	last_rotation(t_stack *stack, int mid);
+void	push_min_to_b(t_stack *stack);
 
 void	algo_big(t_stack *stack);
 
 void	good_orders(t_stack *stack);
 void	orders(t_stack *stack);
+
+void	search_bigger(t_stack *stack);
+void	count_bytes(int nb, int *count);
 
 #endif
