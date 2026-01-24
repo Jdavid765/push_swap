@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/01 17:48:50 by david             #+#    #+#             */
-/*   Updated: 2026/01/22 18:52:12 by david            ###   ########.fr       */
+/*   Updated: 2026/01/24 12:05:58 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,5 @@ void	init(t_stack *stack)
 	stack->instructions = 0;
 	stack->sorted.list = NULL;
 	stack->sorted.size = 0;
+	stack->int_max = NULL;
 }

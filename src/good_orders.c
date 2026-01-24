@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 16:00:46 by david             #+#    #+#             */
-/*   Updated: 2026/01/22 19:24:53 by david            ###   ########.fr       */
+/*   Updated: 2026/01/24 11:17:45 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ void	good_orders(t_stack *stack)
 
 void	orders(t_stack *stack)
 {
-	ft_printf("All is in good orders\n");
 	free_all(stack);
 	exit(1);
 }

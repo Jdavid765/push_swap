@@ -6,7 +6,7 @@
 #    By: david <david@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/05 04:53:08 by david             #+#    #+#              #
-#    Updated: 2026/01/22 21:51:06 by david            ###   ########.fr        #
+#    Updated: 2026/01/24 12:10:54 by david            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,7 @@ SRC = 	src/push_swap.c\
 	src/free.c\
 	src/check_number.c\
 	src/good_orders.c\
+	src/check_int_max.c\
 	commands/swap.c\
 	commands/rotate.c\
 	commands/re_rotate.c\

@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/03 21:10:09 by david             #+#    #+#             */
-/*   Updated: 2026/01/22 18:52:24 by david            ###   ########.fr       */
+/*   Updated: 2026/01/24 12:06:27 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ void	free_all(t_stack *stack)
 		free(stack->b.list);
 	if (stack->sorted.list)
 		free(stack->sorted.list);
+	if (stack->int_max)
+		free(stack->int_max);
 }
 
 void	ft_free(t_stack *stack)

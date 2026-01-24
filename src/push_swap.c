@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 04:49:57 by david             #+#    #+#             */
-/*   Updated: 2026/01/22 22:16:00 by david            ###   ########.fr       */
+/*   Updated: 2026/01/24 12:37:18 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,9 @@ int	insert_a(t_stack *stack, char **av)
 	stack->b.list = ft_calloc(stack->alloc, sizeof(int));
 	if (!stack->b.list)
 		return (-1);
+	stack->int_max = ft_calloc(stack->alloc, sizeof(long int));
+	if (!stack->int_max)
+		return (-1);
 	while (av[i])
 	{
 		if (separate(stack, av[i], &position) == -1)
@@ -40,6 +43,8 @@ void	push_swap(t_stack *stack, char **av)
 	if (insert_a(stack, av) == -1)
 		errors(stack);
 	if (same_numbers(stack) == -1)
+		errors(stack);
+	if (check_int_max(stack) == -1)
 		errors(stack);
 	good_orders(stack);
 	choose_algo(stack);
@@ -57,7 +62,5 @@ int	main(int ac, char **av)
 		push_swap(&stack, av + 1);
 		free_all(&stack);
 	}
-	else
-		ft_printf("Error minimun 2 numbers\n");
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: david <david@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/01 05:33:45 by david             #+#    #+#             */
-/*   Updated: 2026/01/12 16:07:42 by david            ###   ########.fr       */
+/*   Updated: 2026/01/24 12:07:51 by david            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	errors(t_stack *stack)
 {
-	ft_printf("Error idiot\n");
+	ft_printf("Error\n");
 	free_all(stack);
 	exit(1);
 }
@@ -62,6 +62,7 @@ int	separate(t_stack *stack, char *av, int *position)
 	while (stack->cpy[i])
 	{
 		stack->a.list[*position] = ft_atoi(stack->cpy[i]);
+		stack->int_max[*position] = fake_atoi(stack->cpy[i]);
 		if (stack->a.list[*position] == -9010)
 			return (-1);
 		i++;
